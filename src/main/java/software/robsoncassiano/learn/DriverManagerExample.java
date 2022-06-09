@@ -2,7 +2,7 @@ package software.robsoncassiano.learn;
 
 import java.sql.*;
 
-public class Main {
+public class DriverManagerExample {
     public static void main(String[] args) {
         try (Connection connection = DriverManager.getConnection("jdbc:h2:mem:;INIT=RUNSCRIPT FROM 'classpath:users.sql';")) {
             System.out.println("JDBC Connection is valid? " + connection.isValid(0));
